@@ -14,36 +14,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.teacarpproject.ui.theme.TeaCarpProjectTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import com.example.teacarpproject.ui.navigation.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        //enableEdgeToEdge()
         setContent {
             MaterialTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
+                AppNav()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TeaCarpProjectTheme {
-        Greeting("Android")
     }
 }
