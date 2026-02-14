@@ -30,11 +30,18 @@ fun MainNav(
         }
 
         composable("Brewing") {
-            BrewingScreen()
+            BrewingScreen(navHostController)
         }
 
         composable("Guide") {
-                GuideScreen()
+                GuideScreen(navHostController)
+        }
+
+        composable("TeaDetails/{teaId}") { backStackEntry ->
+            val teaId = backStackEntry.arguments?.getString("teaId") ?: ""
+            TeaDetailsScreen(
+                teaId = teaId
+            )
         }
 
     }

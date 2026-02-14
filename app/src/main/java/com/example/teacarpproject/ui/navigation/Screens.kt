@@ -34,7 +34,15 @@ sealed class Screen( //не уверена, но возможно стоит в�
 
     object Brewing : Screen (
         route = "Brewing",
-        title = "Заваривание",
+        title = "Рецепты",
         iconId = R.drawable.try_icon
     )
+
+    object TeaDetails : Screen (
+        route = "TeaDetails/{teaId}",
+        title = "Описание чая",
+        iconId = R.drawable.try_icon
+    ) {
+        fun createId(teaId: String): String = "TeaDetails/$teaId"
+    }
 }
