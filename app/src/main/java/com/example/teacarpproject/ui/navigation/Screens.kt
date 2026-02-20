@@ -3,7 +3,7 @@ package com.example.teacarpproject.ui.navigation
 import androidx.compose.ui.res.painterResource
 import com.example.teacarpproject.R
 
-sealed class Screen( //не уверена, но возможно стоит вынести названия экранов в константы
+sealed class Screen(
     val route: String,
     val title: String,
     val iconId: Int
