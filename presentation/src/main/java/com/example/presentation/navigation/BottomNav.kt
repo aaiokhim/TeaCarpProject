@@ -1,4 +1,4 @@
-package com.example.teacarpproject.ui.navigation
+package com.example.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
@@ -10,7 +10,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.NavigationBarItemDefaults
-import androidx.compose.ui.unit.sp
 
 @Composable
 fun BottomBar(

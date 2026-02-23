@@ -1,4 +1,4 @@
-package com.example.teacarpproject.ui.data
+package com.example.presentation.data
 
 data class TeaType(
     val id: String,

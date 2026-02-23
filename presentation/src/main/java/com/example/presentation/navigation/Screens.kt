@@ -1,7 +1,7 @@
-package com.example.teacarpproject.ui.navigation
+package com.example.presentation.navigation
 
 import androidx.compose.ui.res.painterResource
-import com.example.teacarpproject.R
+import com.example.presentation.R
 
 sealed class Screen(
     val route: String,

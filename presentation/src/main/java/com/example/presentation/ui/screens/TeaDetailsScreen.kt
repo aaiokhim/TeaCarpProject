@@ -1,4 +1,4 @@
-package com.example.teacarpproject.ui.screens
+package com.example.presentation.ui.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -6,11 +6,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.ui.unit.dp
-import com.example.teacarpproject.ui.data.teaTypes
+import com.example.presentation.data.teaTypes
 
 @Composable
 fun TeaDetailsScreen(

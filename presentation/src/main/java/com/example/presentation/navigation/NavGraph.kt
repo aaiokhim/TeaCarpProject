@@ -1,11 +1,12 @@
-package com.example.teacarpproject.ui.navigation
+package com.example.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.composable
-import com.example.teacarpproject.ui.screens.*
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+
+import com.example.presentation.ui.screens.*
 
 @Composable
 fun MainNav(
