@@ -144,4 +144,11 @@ fabric.properties
 
 gradle/wrapper/gradle-wrapper.jar
 
-
+data/consumer-rules.pro
+data/proguard-rules.pro
+data/src/androidTest/
+data/src/test/
+presentation/consumer-rules.pro
+presentation/proguard-rules.pro
+presentation/src/androidTest/
+presentation/src/test/
