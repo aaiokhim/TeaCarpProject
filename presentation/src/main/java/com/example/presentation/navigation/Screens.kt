@@ -7,7 +7,7 @@ sealed class Screen(
     val route: String,
     val title: String,
     val iconId: Int
-) { //сюда по идее еще иконку надо добавить)
+) {
     object Catalog : Screen (
         route = "Catalog",
         title = "Каталог",
@@ -32,17 +32,17 @@ sealed class Screen(
         iconId = R.drawable.try_icon
     )
 
-    object Brewing : Screen (
-        route = "Brewing",
-        title = "Рецепты",
-        iconId = R.drawable.try_icon
-    )
-
     object TeaDetails : Screen (
         route = "TeaDetails/{teaId}",
         title = "Описание чая",
         iconId = R.drawable.try_icon
     ) {
-        fun createId(teaId: String): String = "TeaDetails/$teaId"
+        fun createById(teaId: String): String = "TeaDetails/$teaId"
     }
+
+    object Settings : Screen (
+        route = "Settings",
+        title = "Настройки",
+        iconId = R.drawable.try_icon
+    )
 }

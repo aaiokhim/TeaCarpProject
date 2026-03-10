@@ -6,12 +6,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
-
 import com.example.presentation.ui.screens.*
 
-//import com.example.teacarpproject.ui.navigation.NavGraph
 
-@Composable
+/*@Composable
 fun AppNav() {
     val navController = rememberNavController()
     Scaffold(
@@ -24,4 +22,14 @@ fun AppNav() {
             modifier = Modifier.padding(innerPadding)
         )
     }
+}*/
+
+
+@Composable
+fun AppNav() {
+    val navController = rememberNavController()
+    MainNav(
+        navHostController = navController
+    )
+
 }

@@ -19,7 +19,7 @@ import com.example.presentation.data.TeaType
 
 @Composable
 fun GuideScreen(
-    navController: NavController
+    openTeaDetail: (String) -> Unit,
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -30,7 +30,7 @@ fun GuideScreen(
             TeaTypeCard(
                 teaType = teaType,
                 onClick = {
-                    navController.navigate("TeaDetails/${teaType.id}")
+                    openTeaDetail(teaType.id)
                 }
             )
         }

@@ -15,7 +15,7 @@ import com.example.presentation.data.TeaType
 
 @Composable
 fun BrewingScreen(
-    navController: NavController
+    openTeaDetail: (String) -> Unit,
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -26,7 +26,7 @@ fun BrewingScreen(
             TeaTypeCard(
                 teaType = teaType,
                 onClick = {
-                    navController.navigate("TeaDetails/${teaType.id}")
+                    openTeaDetail(teaType.id)
                 }
             )
         }
