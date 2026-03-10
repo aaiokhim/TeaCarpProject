@@ -29,7 +29,33 @@ fun TeaDetailsScreen(
             )
 
             Text(
-                text = tea.description,
+                text = tea.baseDescription,
+            )
+
+            Text(
+                text = tea.brewing,
+                style = MaterialTheme.typography.headlineLarge,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+
+            Text(
+                text = tea.fastBrew,
+                style = MaterialTheme.typography.headlineLarge,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+
+            Text(
+                text = tea.fastBrewDescription,
+            )
+
+            Text(
+                text = tea.longBrew,
+                style = MaterialTheme.typography.headlineLarge,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
+
+            Text(
+                text = tea.longBrewDescription,
             )
         }
     }

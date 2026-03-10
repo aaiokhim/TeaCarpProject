@@ -37,7 +37,7 @@ fun TeaTypeCard(
             Spacer(modifier = Modifier.height(4.dp))
 
             Text(
-                text = teaType.description
+                text = teaType.baseDescription
             )
         }
     }
