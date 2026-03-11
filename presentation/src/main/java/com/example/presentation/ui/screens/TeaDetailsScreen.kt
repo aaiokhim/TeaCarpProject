@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.ui.unit.dp
 import com.example.presentation.data.teaTypes
+import com.example.presentation.ui.theme.subTitle
 
 @Composable
 fun TeaDetailsScreen(
@@ -25,23 +26,26 @@ fun TeaDetailsScreen(
             Text(
                 text = tea.title,
                 style = MaterialTheme.typography.headlineLarge,
-                modifier = Modifier.padding(bottom = 16.dp)
+                modifier = Modifier.padding(bottom = 16.dp),
+                color = MaterialTheme.colorScheme.onBackground
             )
 
             Text(
                 text = tea.baseDescription,
+                color = MaterialTheme.colorScheme.subTitle
             )
 
             Text(
                 text = tea.brewing,
-                style = MaterialTheme.typography.headlineLarge,
+                style = MaterialTheme.typography.headlineMedium,
                 modifier = Modifier.padding(bottom = 16.dp)
             )
 
             Text(
                 text = tea.fastBrew,
-                style = MaterialTheme.typography.headlineLarge,
-                modifier = Modifier.padding(bottom = 16.dp)
+                style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.padding(bottom = 16.dp),
+                color = MaterialTheme.colorScheme.subTitle
             )
 
             Text(
@@ -50,8 +54,9 @@ fun TeaDetailsScreen(
 
             Text(
                 text = tea.longBrew,
-                style = MaterialTheme.typography.headlineLarge,
-                modifier = Modifier.padding(bottom = 16.dp)
+                style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.padding(bottom = 16.dp),
+                color = MaterialTheme.colorScheme.subTitle
             )
 
             Text(

@@ -1,10 +1,12 @@
 package com.example.presentation.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import com.example.presentation.ui.theme.backgroundDark
 
 
@@ -28,6 +30,10 @@ private val LightColorScheme = lightColorScheme(
     onBackground = mainTitleColor
 )
 
+val ColorScheme.subTitle: Color
+    @Composable
+    get() = if (isSystemInDarkTheme()) subTitleGrayColorDark else subTitleGrayColor
+
 @Composable
 fun TeaCarpAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -45,3 +51,4 @@ fun TeaCarpAppTheme(
     )
 
 }
+

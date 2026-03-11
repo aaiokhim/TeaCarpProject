@@ -17,7 +17,7 @@ fun NotesScreen() {
     Text(
         modifier = Modifier.fillMaxSize().wrapContentHeight(align = Alignment.CenterVertically),
         text = "NotesScreen",
-        color = MaterialTheme.colorScheme.onBackground,
+        color = MaterialTheme.colorScheme.onBackground ,
         textAlign = TextAlign.Center,
         fontSize = 24.sp
     )
