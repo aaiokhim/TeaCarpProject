@@ -5,13 +5,14 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.MaterialTheme
 import com.example.presentation.navigation.AppNav
+import com.example.presentation.ui.theme.TeaCarpAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
         setContent {
-            MaterialTheme {
+            TeaCarpAppTheme() {
                 AppNav()
             }
         }
