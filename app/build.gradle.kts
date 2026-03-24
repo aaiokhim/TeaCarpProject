@@ -97,4 +97,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     debugImplementation(libs.androidx.compose.ui.tooling)
+
+    ksp("androidx.room:room-compiler:2.6.1")
+
 }

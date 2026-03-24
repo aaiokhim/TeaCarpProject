@@ -45,4 +45,10 @@ sealed class Screen(
         title = "Настройки",
         iconId = R.drawable.try_icon
     )
+
+    object Login : Screen (
+        route = "Login",
+        title = "Вход",
+        iconId = R.drawable.try_icon
+    )
 }

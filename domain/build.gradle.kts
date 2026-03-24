@@ -11,3 +11,10 @@ kotlin {
         jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11
     }
 }
+
+/*
+dependencies {
+    implementation(libs.room.ktx)
+    implementation(libs.room.runtime)
+    //ksp(libs.androidx)
+}*/

@@ -3,6 +3,7 @@ package com.example.presentation.navigation
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -39,24 +40,40 @@ fun MainNav(
                     ) {
 
                         composable(Screen.Catalog.route) {
-                            CatalogScreen()
+                            ScreenWithTopBar(
+                                topBar = CatalogScreenTopBar()
+                            ) {
+                                CatalogScreen()
+                            }
                         }
 
                         composable("Profile") {
-                            ProfileScreen()
+                            ScreenWithTopBar(
+                                topBar = ProfileScreenTopBar()
+                            ) {
+                                ProfileScreen()
+                            }
                         }
 
                         composable("Notes") {
-                            NotesScreen()
+                            ScreenWithTopBar(
+                                topBar = NotesScreenTopBar()
+                            ) {
+                                NotesScreen()
+                            }
                         }
 
                         composable("Guide") {
-                            GuideScreen(
-                                openTeaDetail = { id ->
-                                    val route = Screen.TeaDetails.createById(id)
-                                    navHostController.navigate(route)
-                                }
-                            )
+                            ScreenWithTopBar(
+                                topBar = GuideScreenTopBar()
+                            ) {
+                                GuideScreen(
+                                    openTeaDetail = { id ->
+                                        val route = Screen.TeaDetails.createById(id)
+                                        navHostController.navigate(route)
+                                    }
+                                )
+                            }
                         }
                     }
                 }
@@ -65,11 +82,19 @@ fun MainNav(
 
         composable(Screen.TeaDetails.route) { backStackEntry ->
             val teaId = backStackEntry.arguments?.getString("teaId") ?: ""
-            TeaDetailsScreen(teaId = teaId)
+            ScreenWithTopBar(
+                topBar = TeaDetailsScreenTopBar(teaId)
+            ) {
+                TeaDetailsScreen(teaId = teaId)
+            }
         }
 
         composable(Screen.Settings.route) { backStackEntry ->
-            SettingsScreen()
+            ScreenWithTopBar(
+                topBar = SettingsScreenTopBar()
+            ) {
+                SettingsScreen()
+            }
         }
     }
 
